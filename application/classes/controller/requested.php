@@ -9,7 +9,7 @@ class Controller_Requested extends Controller {
 		View::bind_global('menu', $menumodel->getMenu());
 		 
 		$model = new Model_Twitter();
-		$model->retweetRequested();
+		$model->responseRequested();
 		
 		$json = $model->getRequested();
 		

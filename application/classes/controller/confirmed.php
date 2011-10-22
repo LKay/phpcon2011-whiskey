@@ -9,7 +9,8 @@ class Controller_Confirmed extends Controller {
 		View::bind_global('menu', $menumodel->getMenu());
 		
 		$model = new Model_Twitter();
-		$model->retweetRequested();
+		$model->responseRequested();
+		
 		$json = $model->getConfirmed();
 		
 		$confirmed = new Helper_Twitterparse();
