@@ -4,7 +4,6 @@ class Model_Menu extends Model {
 	private $menu = array(
 		array ('active' => false, 'url' => 'home', 'name' => 'Home'),
 		array ('active' => false, 'url' => 'requested', 'name' => 'Requested'),
-		array ('active' => false, 'url' => 'confirmed', 'name' => 'Confirmed'),
 	); 
 	
 	public function getMenu(){
