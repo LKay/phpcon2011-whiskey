@@ -81,7 +81,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
-	'index_file' => NULL,
+	'cache_dir'  => sys_get_temp_dir(),
 ));
 
 /**
