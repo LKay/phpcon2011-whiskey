@@ -6,8 +6,10 @@ if ( !empty($users) ): ?>
 	<ul class="user_list">
 	<?php foreach ( $users as $one_person ): ?>
 		<li>
-			<img src="<?php echo $one_person['profile_image_url']; ?>" />
-			<p><?php echo $one_person['name']; ?></p>
+			<a href="http://twitter.com/<?php echo $one_person['name']; ?>">
+				<img src="<?php echo $one_person['profile_image_url']; ?>" />
+				<span><?php echo $one_person['name']; ?></span>
+			</a>
 		</li>
 	<?php endforeach; ?>
 	</ul>

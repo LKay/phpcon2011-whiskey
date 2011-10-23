@@ -81,11 +81,8 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
-<<<<<<< HEAD
 	'index_file' => FALSE,
-=======
 	'cache_dir'  => sys_get_temp_dir(),
->>>>>>> 77f805c23085b15e3fefca586ea09b93da392f51
 ));
 
 /**
@@ -102,11 +99,6 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	'oauth'  => MODPATH.'oauth',  // OAuth
-	'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 	));
 
 /**
@@ -115,6 +107,6 @@ Kohana::modules(array(
  */
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'twitter',
+		'controller' => 'home',
 		'action'     => 'index',
 	));

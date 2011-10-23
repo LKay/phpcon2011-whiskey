@@ -8,14 +8,15 @@
     <title>PHPConPL 2011 WhiskeyContest</title>
     <?php echo HTML::style('css/reset.css', array('media' => 'screen')); ?>
     <?php echo HTML::style('css/screen.css', array('media' => 'screen')); ?>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 </head>
 <body>
 	<div class="wrapper clear">
   		<h1>PHPConPL 2011 WhiskeyContest</h1>
   		<div id="menu" class="clear">
   			<ul>
-  			<?php foreach ( $menu as $position):  $liclass = ( $position['active'] )? 'class="active"': ''; ?>
-  				<li<?php echo $liclass?>><?php HTML::anchor('/'.$position['url'], $position['name']);?></li>
+  			<?php foreach ( $menu as $position):  $liclass = ( $position['active'] )? ' class="active"': ''; ?>
+  				<li<?php echo $liclass?>><?php echo HTML::anchor('/'.$position['url'], $position['name']);?></li>
   			<?php endforeach;?>
   			</ul>
   		</div>

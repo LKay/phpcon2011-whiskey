@@ -19,8 +19,8 @@ h2 { fons-size: 22px; padding: 20px;}
 
 
 #main { border-top: 1px solid silver; margin: 20px 0px; padding: 30px;}
-#main .user_list li{ height: 40px; }
-#main .user_list li img { width: 32px; height: 32px; padding: 2px; border: 1px solid silver;}
+#main .user_list li{ height: 40px; display: inline-block;margin:10px 20px;}
+#main .user_list li img { width: 32px; height: 32px; padding: 2px; border: 1px solid silver; vertical-align:middle;}
 #main .user_list li p { }
 
 #footer { border-top: 1px solid silver; margin: 20px 0px; text-align: center; padding: 20px; }

@@ -6,10 +6,13 @@ class Controller_Home extends Controller {
 	
 	public function action_index(){
 		$menumodel = new Model_Menu();
-		View::bind_global('menu', $menumodel->getMenu());
+		$menu = $menumodel->getMenu();
+		View::bind_global('menu', $menu);
+		
+		$view = View::factory('default')->set('body', View::factory('home'));
 		
 		$this->response->body(
-			View::factory('home');
+			$view
 		);
 	}
 }// Controller_Requested end

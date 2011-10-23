@@ -5,12 +5,12 @@ class Helper_Twitterparse {
 
 	public function getUsers($json){
 		$users = json_decode($json);
-		if ( $users ){
+		if ( $users->results ){
 			$response = array();
-			foreach ($users as $user){
+			foreach ($users->results as $user){
 				$response[] = array(
-					'name' => $user['user']['name'], 
-					'profile_image_url' => $user['user']['profile_image_url']
+					'name' => $user->from_user, 
+					'profile_image_url' => $user->profile_image_url
 				);
 			}
 			return $response;

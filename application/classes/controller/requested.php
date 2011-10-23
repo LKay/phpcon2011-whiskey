@@ -6,17 +6,36 @@ class Controller_Requested extends Controller {
 	
 	public function action_index(){
 		$menumodel = new Model_Menu();
-		View::bind_global('menu', $menumodel->getMenu());
+		$menu = $menumodel->getMenu();
+		View::bind_global('menu', $menu);
+		$view = View::factory('default');
 		 
 		$model = new Model_Twitter();
 		
-		$json = $model->getRequested();
+		$json = $model->getTweets("#phpcon2011-let-them-win-whiskey");
 		
+		$body = View::factory('usertable')->bind('users',$users);
 		$confirmed = new Helper_Twitterparse();
 		$users = $confirmed->getUsers($json);
 		
 		$this->response->body(
-			View::factory('usertable')->bind('users',$users)
+			$view->set('body', $body)
 		);
 	}
+	
+	public function action_refresh_list()
+	{
+		$model = new Model_Twitter();
+		
+		$json = $model->getTweets("#phpcon2011-let-them-win-whiskey");
+		
+		$body = View::factory('usertable')->bind('users',$users);
+		$confirmed = new Helper_Twitterparse();
+		$users = $confirmed->getUsers($json);
+		
+		$this->response->body(
+			$body
+		);
+	}
+	
 }// Controller_Requested end

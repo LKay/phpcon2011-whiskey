@@ -8,7 +8,7 @@ class Model_Menu extends Model {
 	
 	public function getMenu(){
 		foreach ($this->menu as $id => $menu){
-			if ( $menu->url == Request::current()->controller() ){
+			if ( $menu['url'] == Request::current()->controller() ){
 				$this->menu[$id]['active'] = true;
 			}
 		}
