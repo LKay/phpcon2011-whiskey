@@ -429,3 +429,18 @@
 --
 #0 /media/data/www/phpcon2011/index.php(109): Kohana_Request->execute()
 #1 {main}
+2011-10-23 03:55:48 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-10-23 03:55:48 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /media/data/www/phpcon2011/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-10-23 03:56:10 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-10-23 03:56:10 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /media/data/www/phpcon2011/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-10-23 03:56:48 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-10-23 03:56:48 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /media/data/www/phpcon2011/index.php(109): Kohana_Request->execute()
+#1 {main}

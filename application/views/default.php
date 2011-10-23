@@ -26,6 +26,26 @@
 			<?php echo $body; ?>
 	
 		</div>
+		
+		<?php if (Request::current()->controller() == 'requested') : ?>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				function update() {
+					$.ajax({
+						cache : false,
+						type : 'GET',
+						url : '<?php echo URL::site('requested/refresh_list') ?>',
+						success : function(data) {
+							$("#main").html(data);
+						}
+					});
+					setTimeout(update, 10000);
+				}
+				setTimeout(update, 10000);
+			});
+			
+		</script>
+		<?php endif ?>
 				
 		<div id="footer" class="clear">
 			<p>2011 | <a href="http://www.phpcon.pl/2011/" title="PHPConPL 2011">PHPConPL 2011</a> | WhiskeyContest</p>
