@@ -81,7 +81,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
-	'index_file' => NULL,
+	'index_file' => FALSE,
 ));
 
 /**
@@ -111,6 +111,6 @@ Kohana::modules(array(
  */
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'twittshit',
+		'controller' => 'twitter',
 		'action'     => 'index',
 	));
