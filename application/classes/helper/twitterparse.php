@@ -8,11 +8,12 @@ class Helper_Twitterparse {
 		if ( $users->results ){
 			$response = array();
 			foreach ($users->results as $user){
-				$response[] = array(
+				$response[$user->from_user] = array(
 					'name' => $user->from_user, 
 					'profile_image_url' => $user->profile_image_url
 				);
 			}
+			ksort($response);
 			return $response;
 		}
 		return false;
